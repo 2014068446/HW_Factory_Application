@@ -24,7 +24,7 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="#">Start Bootstrap</a>
+			<a class="navbar-brand" href="#"><img src="vendor/img/logo.png" style="height:50px; width:100px;"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -41,10 +41,16 @@
 	<!-- Page Content -->
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3">
-				<h1 class="my-4">Welcome to Masters Phone Hub!</h1>
-			</div><!-- /.col-lg-3 -->
-			<div class="col-lg-9">
+			 <div class="col-lg-3">
+
+          <h1 class="my-4">Shop Name</h1>
+          <div class="list-group">
+            <a href="#" class="list-group-item">Category 1</a>
+            <a href="#" class="list-group-item">Category 2</a>
+            <a href="#" class="list-group-item">Category 3</a>
+          </div>
+
+        </div>
 				<div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -77,10 +83,10 @@
 				<div class="row">
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
-							<a href="#"><img class="card-img-top childimg" src="vendor/img/s8.jpg" alt=""></a>
+							<a href="#"><img class="card-img-top childimg entry" value="s8" src="vendor/img/s8.jpg" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
-									<a href="#">Samsung Galaxy S8</a>
+									<a href="#" class="entry" value="s8">Samsung Galaxy S8</a>
 								</h4>
 								<h5>$24.99</h5>
 								<p class="card-text">Biometrics aside, this is the best Android phone.</p>
@@ -92,10 +98,10 @@
 					</div>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
-							<a href="#"><img class="card-img-top childimg" src="vendor/img/one+5.jpg" alt=""></a>
+							<a href="#"><img class="card-img-top childimg entry" value="op5" src="vendor/img/one+5.jpg" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
-									<a href="#">OnePlus 5</a>
+									<a href="#" class="entry" value="op5">OnePlus 5</a>
 								</h4>
 								<h5>$24.99</h5>
 								<p class="card-text">A genuine flagship killer.</p>
@@ -107,10 +113,10 @@
 					</div>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
-							<a href="#"><img class="card-img-top childimg" src="vendor/img/s8plus.png" alt=""></a>
+							<a href="#"><img class="card-img-top childimg entry" value="s8plus" src="vendor/img/s8plus.png" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
-									<a href="#">Samsung Galaxy S8 Plus</a>
+									<a href="#" class="entry" value="s8plus">Samsung Galaxy S8 Plus</a>
 								</h4>
 								<h5>$24.99</h5>
 								<p class="card-text">Samsung now owns second place as well.</p>
@@ -122,10 +128,10 @@
 					</div>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
-							<a href="#"><img class="card-img-top childimg" src="vendor/img/motoz.png" alt=""></a>
+							<a href="#"><img class="card-img-top childimg entry" value="motoz" src="vendor/img/motoz.png" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
-									<a href="#">Moto Z</a>
+									<a href="#" class="entry" value="motoz">Moto Z</a>
 								</h4>
 								<h5>$24.99</h5>
 								<p class="card-text">Modular and the world's thinnest</p>
@@ -137,10 +143,10 @@
 					</div>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
-							<a href="#"><img class="card-img-top childimg" src="vendor/img/xperia.jpg" alt=""></a>
+							<a href="#"><img class="card-img-top childimg entry" value="xperia" src="vendor/img/xperia.jpg" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
-									<a href="#">Sony Xperia XZ Premium</a>
+									<a href="#" class="entry" value="xperia">Sony Xperia XZ Premium</a>
 								</h4>
 								<h5>$24.99</h5>
 								<p class="card-text">The perfect phone for 4K fanatics.</p>
@@ -152,10 +158,10 @@
 					</div>
 					<div class="col-lg-4 col-md-6 mb-4">
 						<div class="card h-100">
-							<a href="#"><img class="card-img-top childimg" src="vendor/img/htc11.png" alt=""></a>
+							<a href="#"><img class="card-img-top childimg entry" value="htc11" src="vendor/img/htc11.png" alt=""></a>
 							<div class="card-body">
 								<h4 class="card-title">
-									<a href="#">HTC U11</a>
+									<a href="#" class="entry" value="htc11">HTC U11</a>
 								</h4>
 								<h5>$24.99</h5>
 								<p class="card-text">A wildly impressive phone - in a sea of wildly impressive phones.</p>
@@ -181,7 +187,11 @@
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function(){
-		    $('[data-toggle="popover"]').popover();   
+				$('[data-toggle="popover"]').popover();   
+		});
+		$(".entry").click(function() {
+			var value = $(this).attr('value');
+			alert(value);
 		});
 	</script>
 </body>
