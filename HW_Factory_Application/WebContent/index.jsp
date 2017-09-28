@@ -69,7 +69,8 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-        <div class="row">
+        <form action="ProcessThang" method="POST" id="ediwup">
+          <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top childimg entry" value="s8" src="vendor/img/s8.jpg" alt=""></a>
@@ -161,6 +162,7 @@
             </div>
           </div>
         </div><!-- /.row -->
+      	</form><!-- /.form -->
       </div><!-- /.col-lg-9 -->
     </div><!-- /.row -->
   </div><!-- /.container -->
@@ -178,17 +180,12 @@
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();   
     });
-    $(".entry").click(function() {
+    $(".entry").click(function(e) {
+      e.preventDefault();
       var value = $(this).attr('value');
-      $.ajax({
-			type: 'POST',
-			url : 'ProcessThang',
-			data : {phone: value},
-			success: function (data){	
-			},
-			error: function (data){
-			}
-	  });
+      var entry = $("<input>").attr("type", "hidden").attr("name", "phone").val(value);
+      $('#ediwup').append(entry);
+      $('#ediwup').submit();
     });
   </script>
 </body>
