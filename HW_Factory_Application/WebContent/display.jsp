@@ -76,14 +76,17 @@
               <a href="#"></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#" class="entry"><%=phoneData.viewBrand() + "" + phoneData.viewModel() %></a>
+                  <a href="#" class="entry"><%=phoneData.viewBrand() + " " + phoneData.viewModel() %></a><br />
+                  <a href="#">&#9733; &#9733; &#9733; &#9733; &#9734;</a><br /><br />
                 </h4>
-                <h5>$24.99</h5>
-                <p class="card-text"><%=phoneData.viewDescription() %></p><br />
+                <h5><%=phoneData.getSpecs().viewPrice() %></h5>
+                <p class="card-text"><%=phoneData.viewDescription() %></p>
               	<p class="card-text"><%=phoneData.getSpecs().viewSpecification() %></p>
               </div>
+              
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <small class="text-muted"></small>
+                <button class="btn btn-default btn-xs" onclick="goBack()">See other catalogs</button>
               </div>
             </div>
           </div>
@@ -91,6 +94,7 @@
       </div><!-- /.col-lg-9 -->
     </div><!-- /.row -->
   </div><!-- /.container -->
+  <br /><br />
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
@@ -105,21 +109,9 @@
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();   
     });
-    $(".entry").click(function(e) {
-      e.preventDefault();
-      var value = $(this).attr('value');
-      $.ajax({
-			type: 'POST',
-			url : 'ProcessThang',
-			data : {phone: value},
-			success: function (data){
-				window.location.href="display.jsp"
-
-			},
-			error: function (data){
-			}
-	  });
-    });
+    function goBack() {
+    	window.history.back();
+    }
   </script>
 </body>
 </html>
