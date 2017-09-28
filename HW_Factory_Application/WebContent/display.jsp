@@ -71,12 +71,32 @@
           </a>
         </div>
         <div class="row">
-          <div class="col-lg-12">
+          <div class="col-lg-6">
+          	<div class="card h-100">
+              <div class="card-body">
+              	<%
+              		String img = "";
+              		String model = phoneData.viewModel();
+              		
+              		switch (model) {
+              		case "Moto Z"            : img = "motoz.png"; break;
+              		case "5"                 : img = "one+5.jpg"; break;
+              		case "U11"               : img = "htc11.png";   break;
+              		case "Galaxy S8"         : img = "s8.jpg";      break;
+              		case "Galaxy S8 Plus"    : img = "s8plus.png";  break;
+              		case "Xperia XZ Premium" : img = "xperia.jpg";  break;
+              		}
+              	%>
+              	<img class="card-img-top childimg" src="vendor/img/<%=img %>">
+              </div>
+          	</div>
+          </div>
+          <div class="col-lg-6">
             <div class="card h-100">
               <a href="#"></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#" class="entry"><%=phoneData.viewBrand() + " " + phoneData.viewModel() %></a><br />
+                  <a href="#" class="entry"><%=phoneData.viewBrand() + " " + model %></a><br />
                   <a href="#">&#9733; &#9733; &#9733; &#9733; &#9734;</a><br /><br />
                 </h4>
                 <h5><%=phoneData.getSpecs().viewPrice() %></h5>
@@ -86,7 +106,7 @@
               
               <div class="card-footer">
                 <small class="text-muted"></small>
-                <button class="btn btn-default btn-xs" onclick="goBack()">See other catalogs</button>
+                <button type="button" class="btn btn-default btn-xs" onclick="goBack()">See other catalogs</button>
               </div>
             </div>
           </div>
